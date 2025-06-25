@@ -1,0 +1,81 @@
+下载：
+
+下载失败记入日志, 在d盘的mc-automation-tool-log目录下automationTool-error.log
+
+PNG 透明图（要用代理,一次最多下载2000个图片）:
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\dior_source "dior" PNG
+
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\lv_source "LOUIS VUITTON" PNG 2c9fbd597a127e37017a1464cf381a13
+
+B 图:
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\lv_source "LOUIS VUITTON B "2021-06-01 00:00:00" 
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\CELINE_source "CELINE" B 2c9fbd5996a32de60196a45ef70e75b1
+
+B(png)->C 图:
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\lv_source "LOUIS VUITTON" BC "2021-02-24 11:13:34" 
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\REDLINE_source "REDLINE" BC 2c9fbd5973436375017348ab888e4ced
+
+P 图:
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\BURBERRY_source "BURBERRY" P "2021-1-4 0:0:0"
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\CELINE_source CELINE P 2c9fbd5996a32de60196a45ef70e75b1
+
+Q 图:
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\BURBERRY_source "BURBERRY" Q "2021-1-4 0:0:0"
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\CELINE_source CELINE Q 2c9fbd5996a32de60196a45ef70e75b1
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\CELINE_source CELINE Q "2021-12-1 0:0:0"
+
+B P Q: java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\CELINE_source "CELINE" Q
+
+转换为透明图（要用代理）：
+有语言选择弹框的代理:
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApplication d:\chromedriver.exe d:\brand_images\STEFANORICCI_source d:\brand_images\STEFANORICCI_completed T "STEFANO RICCI" C
+无语言选择弹框的代理:
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApplication d:\share\chromedriver.exe d:\brand_images\celine_source d:\brand_images\celine_completed F "celine" C
+
+上传：
+java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication U D:\brand_images\celine_completed C
+
+图片类型: 首图-JPG方图(B) 首图-透明图-原图(C) 首图-透明图-800PNG(D) 首图-透明图-1500PNG(E) 首图-JPG首图原图(F) 详细图-方图(P) 详细图-原图(Q)
+图片类型: 首图-JPG方图[B] 首图-透明图-原图[C] 首图-透明图-800PNG[D] 首图-透明图-1500PNG[E] 首图-JPG首图原图[F] 详细图-方图[P] 详细图-原图[Q]
+--------------------------------------------------------------------------------------------------
+https://www.stickermule.com/trace/9f5f62be-6350-414d-8bf3-d75f67379fd7/edit
+
+详细图-方图(P):
+http://47.104.181.75:18085/images/LOUIS%20VUITTON/M1/M10013/000.jpg
+http://47.104.181.75:18085/images/LOUIS%20VUITTON/M1/M10013/001.jpg
+
+首图-官网URL(A):
+
+详细图-原图(Q):
+http://47.104.181.75:18085/images/LOUIS%20VUITTON/M1/M10013/orgServerJpgImage/000.jpg
+http://47.104.181.75:18085/images/LOUIS%20VUITTON/M1/M10013/orgServerJpgImage/001.jpg
+
+首图-JPG方图(B):
+http://47.104.181.75:18085/images/LOUIS%20VUITTON/M1/M10013/orgJpgImage/LOUIS---VUITTON-----M10013.jpg
+
+首图-透明图-原图(C):
+http://47.104.181.75:18085/images/LOUIS%20VUITTON/M1/M10013/firstImage/LOUIS---VUITTON-----M10013.png
+
+首图-透明图-800PNG(D)
+http://47.104.181.75:18085/images/LOUIS%20VUITTON/M1/M10013/800Png/800X800_LOUIS---VUITTON-----M10013.png
+
+首图-透明图-1500PNG(E):
+http://47.104.181.75:18085/images/LOUIS%20VUITTON/M1/M10013/1500Png/1500X1500_LOUIS---VUITTON-----M10013.png
+
+首图-JPG首图原图(F):
+http://47.104.181.75:18085/images/LOUIS%20VUITTON/M1/M10013/orgJpgImageOrg/LOUIS---VUITTON-----M10013.jpg
+
+实拍图(SP):
+
+详细图片-官网URL(O):
+
+主图：B->P D->P E->P
+详情图：Q
+
+工具生成图片顺序：B Q P
+
+[](https://twicpics.celine.com/product-prd/images/large/46P456BRA.35OR_1_SUM19_112624 (2).jpg?twic=v1/dpr=1.25/cover=1500x1500|https://twicpics.celine.com/product-prd/images/large/46P456BRA.35OR_2_SUM19_112885 (2).jpg?twic=v1/dpr=1.25/cover=1500x1500|https://twicpics.celine.com/product-prd/images/large/46P456BRA.35OR_3_SUM19_113053 (2).jpg?twic=v1/dpr=1.25/cover=1500x1500)
+
+[](https://twicpics.celine.com/product-prd/images/large/46P256GLW.37WI_1_SUM19_141633.jpg?twic=v1/dpr=1.25/cover=1500x1500|https://twicpics.celine.com/product-prd/images/large/46P256GLW.37WI_2_SUM19_141707.jpg?twic=v1/dpr=1.25/cover=1500x1500)
+
+[](https://twicpics.celine.com/product-prd/images/large/2M811080P.07AQ_2_WIN21_v8.jpg?twic=v1/resize-max=400/quality-min=100 400w, https://twicpics.celine.com/product-prd/images/large/2M811080P.07AQ_2_WIN21_v8.jpg?twic=v1/resize-max=600/quality-min=100 600w, https://twicpics.celine.com/product-prd/images/large/2M811080P.07AQ_2_WIN21_v8.jpg?twic=v1/resize-max=800/quality-min=100 800w, https://twicpics.celine.com/product-prd/images/large/2M811080P.07AQ_2_WIN21_v8.jpg?twic=v1/resize-max=1000/quality-min=100 1000w, https://twicpics.celine.com/product-prd/images/large/2M811080P.07AQ_2_WIN21_v8.jpg?twic=v1/resize-max=1200/quality-min=100 1200w, https://twicpics.celine.com/product-prd/images/large/2M811080P.07AQ_2_WIN21_v8.jpg?twic=v1/resize-max=1600/quality-min=100 1600w, https://twicpics.celine.com/product-prd/images/large/2M811080P.07AQ_2_WIN21_v8.jpg?twic=v1/resize-max=1800/quality-min=100 1800w, https://twicpics.celine.com/product-prd/images/large/2M811080P.07AQ_2_WIN21_v8.jpg?twic=v1/resize-max=2000/quality-min=100 2000w)

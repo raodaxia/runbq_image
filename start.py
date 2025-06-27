@@ -1,9 +1,9 @@
 import os
 import subprocess
 from loguru import logger
+from typing import List, Union, Iterable, Any
 
-
-def read_from_file(filepath: str):
+def read_from_file(filepath: str) -> Union[Iterable[str], None]:
     try:
         with open(filepath, 'r', encoding="utf-8") as fp:
             return [line.strip() for line in fp]
@@ -20,8 +20,10 @@ def read_from_file(filepath: str):
 
 
 def start():
-    ids = read_from_file(r"ids.txt")
+    ids: Any = read_from_file(r"ids.txt")
     try:
+
+        # java_library_path = "/opt/homebrew/Cellar/webp/1.5.0/lib"
         # logger.debug(command_argv("B", "burberry", "2c9fbd59970a3496019754292a8c66e0"))
         # subprocess.run(["dir"])
         # 执行命令并捕获输出
@@ -30,8 +32,20 @@ def start():
             logger.debug(f"正在处理第{index}个: {idx}")
             # os.system(command_argv("B", "Celine", idx))
             # os.system(command_argv("Q", "Celine", idx))
-            os.system(rf'java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D ./celine "CELINE" B {idx}')
+            # os.system(rf'java  -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D ./celine "CELINE" B {idx}')
             # os.system(rf'java -cp mc-component-automation-tool.jar tech.arikin.automation.image.ImageApiApplication D D:\brand_images\CELINE_source "CELINE" Q {idx}')
+            command = [
+                "java",
+                "-cp",
+                "mc-component-automation-tool.jar",
+                "tech.arikin.automation.image.ImageApiApplication",
+                "D",
+                "./celine",
+                "CELINE",
+                "B",
+                idx
+            ]
+            subprocess.run(command)
 
     except Exception as e:
         logger.error(f"图片处理错误: {str(e)}")
